@@ -15,6 +15,14 @@ def process_user(user):
         "pictureProfile": user["metadata"].get("pictureProfile"),
         "pictureBubble": user["metadata"].get("pictureBubble"),
         "spData": user["metadata"].get("spData"),
+        "linkFacebook": user["metadata"].get("linkFacebook"),
+        "linkInstagram": user["metadata"].get("linkInstagram"),
+        "linkLinkedin": user["metadata"].get("linkLinkedin"),
+        "linkTwitter": user["metadata"].get("linkTwitter"),
+        "linkWebsite": user["metadata"].get("linkWebsite"),
+        "linkYoutube": user["metadata"].get("linkYoutube"),
+        "location": user["metadata"].get("location"),
+        "myersBriggs": user["metadata"].get("myersBriggs"),
         "createdAt": user.get("createdAt"),
         "updatedAt": user.get("updatedAt"),
         "email": user.get("email"),
@@ -32,7 +40,7 @@ def process_user(user):
     }
     return user_info
 
-# Function to load all JSON files and process data
+# Function to load and process all JSON files
 def load_and_process_files(files):
     all_users = []
     for file in files:
